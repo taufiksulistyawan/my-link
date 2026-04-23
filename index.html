@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Links</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(270deg, #667eea, #764ba2, #6a11cb);
+      background-size: 600% 600%;
+      animation: gradientMove 10s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 10px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .profile h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 12px 15px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 0.6s ease forwards;
+    }
+
+    .link-item:nth-child(1) { animation-delay: 0.2s; }
+    .link-item:nth-child(2) { animation-delay: 0.4s; }
+    .link-item:nth-child(3) { animation-delay: 0.6s; }
+    .link-item:nth-child(4) { animation-delay: 0.8s; }
+    .link-item:nth-child(5) { animation-delay: 1s; }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .link-item i {
+      font-size: 18px;
+      width: 25px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .link-item:hover {
+      transform: scale(1.07) translateY(-2px);
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .link-item:hover i {
+      transform: rotate(10deg) scale(1.2);
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      opacity: 0.8;
+      animation: fadeIn 2s ease forwards;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="profile">
+      <img src="img/profil.jpg" alt="profile">
+      <h1>Taufik Sulistyawan</h1>
+    </div>
+
+    <div class="links">
+      <a href="https://instagram.com/taufiksulistyawan" class="link-item">
+        <i class="fab fa-instagram"></i>
+        Instagram
+      </a>
+
+      <a href="https://facebook.com/taufik.underlayer" class="link-item">
+        <i class="fab fa-facebook"></i>
+        Facebook
+      </a>
+
+      <a href="https://www.youtube.com/@TaufikSulistyawan" class="link-item">
+        <i class="fab fa-youtube"></i>
+        YouTube
+      </a>
+
+      <a href="https://github.com/taufiksulistyawan" class="link-item">
+        <i class="fab fa-github"></i>
+        GitHub
+      </a>
+
+      <a href="https://taufiksulistyawan.medium.com/" class="link-item">
+        <i class="fab fa-medium"></i>
+        Medium
+      </a>
+    </div>
+
+    <footer>
+      © 2026 - Taufik Sulistyawan
+    </footer>
+
+  </div>
+
+</body>
+</html>
